@@ -20,6 +20,16 @@ type Employee struct {
 }
 
 func CalculateTotalSalary(employee *Employee) (float64, error) {
-	// Seu código aqui
-	return 0, errors.New("Not implemented yet")
+	totalBonus := 0.0
+	for _, bonus := range emp.MonthlyBonus {
+		totalBonus += bonus
+	}
+
+	totalSalary := emp.BaseSalary + totalBonus
+
+	if totalBonus > 1500.0 {
+		emp.Position = "Senior " + emp.Position
+	}
+
+	return totalSalary, nil
 }
