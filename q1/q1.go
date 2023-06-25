@@ -23,5 +23,5 @@ func MergeStudentData(studentData1 map[string]Student, studentData2 map[string]S
 		}
 	}
 	
-	return nil
+	return mergedData
 }
